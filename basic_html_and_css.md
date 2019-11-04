@@ -18,6 +18,8 @@ Here's an example of a page's layout:
 
 ## Basic CSS
 
+Use __\<style\>...\</style\>__ tag to specify CSS elements.
+
 Another (less cleaner) option to add styles (inline method):
 
 ```html
@@ -26,7 +28,8 @@ Another (less cleaner) option to add styles (inline method):
 
 __.red-text__ is a class (reusable style) selector.
 
-__font-family: FAMILY_NAME, GENERIC_NAME;__  The GENERIC_NAME is a fallback font in case the other specified font is not available.
+__font-family: FAMILY_NAME, GENERIC_NAME;__  
+The GENERIC_NAME is a fallback font in case the other specified font is not available.
 
 __#cat-photo-form__ is an id selector. It is not reusable and should only be applied to one element. 
 IT has a higher specificity (importance) than a class so if both are applied to the same element and have conflicting styles, the styles of the id will be applied.
