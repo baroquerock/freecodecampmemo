@@ -3,7 +3,7 @@
 
 ## Basic structure
 
-The __\<!DOCTYPE ...\>__ tag shows the version of HTML. For HTML5, you use __\<!DOCTYPE html\>__
+1. The __\<!DOCTYPE ...\>__ tag shows the version of HTML. For HTML5, you use __\<!DOCTYPE html\>__
 The __!__ and uppercase __DOCTYPE__ is important, especially for older browsers. The html is not case sensitive.
 
 Here's an example of a page's layout:
@@ -16,25 +16,36 @@ Here's an example of a page's layout:
 </html>
 ```
 
+2.  HTML5 introduces more descriptive HTML tags (_header_, _footer_, _nav_, _video_, _article_, _section_,  _main_). These tags make your HTML easier to read, and also help with Search Engine Optimization (SEO) and accessibility.
+
+
+
+
 ## Basic CSS
 
-Use __\<style\>...\</style\>__ tag to specify CSS elements.
+1. Use __\<style\>...\</style\>__ tag to specify CSS elements.
 
-Another (less cleaner) option to add styles (inline method):
+2. Another (less cleaner) option to add styles (inline method):
 
 ```html
 <h2 style="color: blue;">CatPhotoApp</h2>
 ```
 
-__.red-text__ is a class (reusable style) selector.
+3. __.red-text__ is a class (reusable style) selector.
 
-__font-family: FAMILY_NAME, GENERIC_NAME;__  
-The GENERIC_NAME is a fallback font in case the other specified font is not available.
+4. __font-family: FAMILY_NAME, GENERIC_NAME;__  
+The __GENERIC_NAME__ is a fallback font in case the other specified font is not available.
 
-__#cat-photo-form__ is an id selector. It is not reusable and should only be applied to one element. 
-IT has a higher specificity (importance) than a class so if both are applied to the same element and have conflicting styles, the styles of the id will be applied.
+5. __#cat-photo-form__ is an id selector. It is not reusable and should only be applied to one element. 
+It has a higher specificity (importance) than a class so if both are applied to the same element and have conflicting styles, the styles of the id will be applied.
 
-__[attr=value]__ is an attribute selector. This selector matches and styles elements with a specific attribute value.
+6. __[attr=value]__ is an attribute selector. This selector matches and styles elements with a specific attribute value.
+
+7. Google Fonts is a free library of web fonts that you can use in your CSS by referencing the font's URL.
+
+
+
+
 
 
 ```html
