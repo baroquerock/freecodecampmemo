@@ -1,7 +1,10 @@
 # Basic HTML and CSS
 
-The <!DOCTYPE ...> tag shows the version of HTML. For HTML5, you use <!DOCTYPE html>.
-The ! and uppercase DOCTYPE is important, especially for older browsers. The html is not case sensitive.
+
+### Basic structure
+
+The __\<!DOCTYPE ...\>__ tag shows the version of HTML. For HTML5, you use __\<!DOCTYPE html\>__.
+The ! and uppercase __DOCTYPE__ is important, especially for older browsers. The html is not case sensitive.
 
 Here's an example of a page's layout:
 
