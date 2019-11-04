@@ -1,10 +1,10 @@
 # Basic HTML and CSS
 
 
-### Basic structure
+## Basic structure
 
-The __\<!DOCTYPE ...\>__ tag shows the version of HTML. For HTML5, you use __\<!DOCTYPE html\>__.
-The ! and uppercase __DOCTYPE__ is important, especially for older browsers. The html is not case sensitive.
+The __\<!DOCTYPE ...\>__ tag shows the version of HTML. For HTML5, you use __\<!DOCTYPE html\>__
+The __!__ and uppercase __DOCTYPE__ is important, especially for older browsers. The html is not case sensitive.
 
 Here's an example of a page's layout:
 
@@ -16,6 +16,22 @@ Here's an example of a page's layout:
 </html>
 ```
 
+## Basic CSS
+
+Another (less cleaner) option to add styles (inline method):
+
+```html
+<h2 style="color: blue;">CatPhotoApp</h2>
+```
+
+__.red-text__ is a class (reusable style) selector.
+
+__font-family: FAMILY_NAME, GENERIC_NAME;__  The GENERIC_NAME is a fallback font in case the other specified font is not available.
+
+__#cat-photo-form__ is an id selector. It is not reusable and should only be applied to one element. 
+IT has a higher specificity (importance) than a class so if both are applied to the same element and have conflicting styles, the styles of the id will be applied.
+
+__[attr=value]__ is an attribute selector. This selector matches and styles elements with a specific attribute value.
 
 
 ```html
