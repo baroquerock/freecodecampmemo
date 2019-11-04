@@ -2,50 +2,106 @@
 
 
 ```html
+
 <!DOCTYPE html>
 
 <html>
-<head>
 
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+	<head>
 
-<style>
-  .red-text {
-    color: red;
-  }
+		<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
 
-  h2 {
-    font-family: Lobster, monospace;
-  }
+		<style>
+		  .red-text {
+		    color: red;
+		  }
 
-  p {
-    font-size: 16px;
-    font-family: monospace;
-  }
+		  h2 {
+		    font-family: Lobster, monospace;
+		  }
 
-  .thick-green-border {
-    border-color: green;
-    border-width: 10px;
-    border-style: solid;
-    border-radius: 50%;
-  }
+		  p {
+		    font-size: 16px;
+		    font-family: monospace;
+		  }
 
-  .smaller-image {
-    width: 100px;
-  }
+		  .thick-green-border {
+		    border-color: green;
+		    border-width: 10px;
+		    border-style: solid;
+		    border-radius: 50%;
+		  }
 
-  .silver-background {
-    background-color: silver;
-  }
+		  .smaller-image {
+		    width: 100px;
+		  }
 
-  #cat-photo-form {
-    background-color: green;
-  }
+		  .silver-background {
+		    background-color: silver;
+		  }
 
-  [type='checkbox'] {
-  margin: 10px 0px 15px 0px;
-  }
-</style>
-</head>
+		  #cat-photo-form {
+		    background-color: green;
+		  }
 
+		  [type='checkbox'] {
+		  margin: 10px 0px 15px 0px;
+		  }
+		</style>
+
+	</head>
+
+	<body> 
+
+		<h2 class="red-text">CatPhotoApp</h2>
+
+		<main>
+
+		  <p class="red-text">Click here to view more <a href="#">cat photos</a>.</p>
+
+		  <p> 
+		  View more <a href="http://freecatphotoapp.com" target="_blank">cat photos</a>
+		  </p>
+		  
+		  <a href="#"><img class="smaller-image thick-green-border" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+
+		  <div class="silver-background">
+
+		    <!--
+		    Unordered list - <ul>
+		    Ordered list - <ol>
+		    -->
+
+		    <p>Things cats love:</p>
+		    <ul>
+		      <li>cat nip</li>
+		      <li>laser pointers</li>
+		      <li>lasagna</li>
+		    </ul>
+		    <p>Top 3 things cats hate:</p>
+		    <ol>
+		      <li>flea treatment</li>
+		      <li>thunder</li>
+		      <li>other cats</li>
+		    </ol>
+		  </div>
+
+
+		  <form action="/submit-cat-photo" id="cat-photo-form">
+
+		    <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor" checked> Indoor</label>
+		    <label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor"> Outdoor</label><br>
+		    <label for="loving"><input id="loving" type="checkbox" name="personality" checked> Loving</label>
+		    <label for="lazy"><input id="lazy" type="checkbox" name="personality"> Lazy</label>
+		    <label for="energetic"><input id="energetic" type="checkbox" name="personality"> Energetic</label><br>
+		    <input type="text" placeholder="cat photo URL" required>
+		    <button type="submit">Submit</button>
+
+		  </form>
+
+		</main>
+		
+	</body>
+
+</html>
 ```
