@@ -18,7 +18,9 @@ Here's an example of a page's layout:
 
 2.  HTML5 introduces more descriptive HTML tags (_header_, _footer_, _nav_, _video_, _article_, _section_,  _main_). These tags make your HTML easier to read, and also help with Search Engine Optimization (SEO) and accessibility.
 
+3. The __div__ element is a general purpose container for other elements.
 
+4. The tag for unordered list: __\<ul\>__, ordered list:  __\<ol\>__
 
 
 ## Basic CSS
@@ -71,6 +73,27 @@ improve accessibility and is displayed if the image fails to load. If the image 
 
 2. Nesting __\<img\>__ inside __\<a\>__ can make a link out of an image.
 
+
+## Forms
+
+1. Placeholder text is displayed by default.
+
+2. By specifying an __action__ on your form element you can submit data to a server (to the URL you specified with your form's action attribute).
+
+3. Some inputs can be made mandatory: 
+```html
+<input type="text" required>
+```
+
+4. Radio buttons - one answer out of multiple options. Each of your radio buttons can be nested within its own __label__ element. By wrapping an input element inside of a label element it will automatically associate the radio button input with the label element surrounding it.
+
+5. A radio button group is created by sharing the same __name__ attribute.
+
+6. It is considered best practice to set a __for__ attribute on the label element, with a value that matches the value of the __id__ attribute of the input element. This allows assistive technologies to create a linked relationship between the label and the child input element.
+
+7. Checkbox buttons - multiple answers out of multiple options.
+
+8. Here, you have two radio inputs. When the user submits the form with the indoor option selected, the form data will include the line: indoor-outdoor=indoor. This is from the __name__ and __value__ attributes of the "indoor" input. If you omit the __value__ attribute, the submitted form data uses the default value, which is on. In this scenario, if the user clicked the "indoor" option and submitted the form, the resulting form data would be indoor-outdoor=on, which is not useful. So the value attribute needs to be set to something to identify the option.
 
 
 ## Sample code
