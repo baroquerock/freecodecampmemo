@@ -267,3 +267,414 @@ If every two color stop values are the same color, the blending isn't noticeable
   }
 </style>
 ```
+
+
+## Transformations
+
+
+1. To change the scale of an element, CSS has the __transform__ property, along with its __scale()__ function. The following code example doubles the size of _#ball2_ on the page:
+
+
+```html
+<style>
+  .ball { 
+    width: 40px;
+    height: 40px;
+    margin: 50 auto;
+    position: fixed;
+    background: linear-gradient(
+      35deg,
+      #ccffff,
+      #ffcccc
+    );
+    border-radius: 50%;
+  }
+  #ball1 {
+    left: 20%;
+  }
+  #ball2 {
+    left: 65%;
+    transform:scale(2);
+  }
+
+
+</style>
+
+<div class="ball" id= "ball1"></div>
+<div class="ball" id= "ball2"></div>
+```
+
+2. The __transform__ property has a variety of functions that lets you scale, move, rotate, skew, etc., your elements. When used with pseudo-classes such as __:hover__ that specify a certain state of an element, the transform property can easily add interactivity to your elements.
+
+Here's an example to scale the div elements to 1.1 times their original size when a user hovers over them:
+
+
+```html
+<style>
+  div { 
+    width: 70%;
+    height: 100px;
+    margin:  50px auto;
+    background: linear-gradient(
+      53deg,
+      #ccfffc,
+      #ffcccf
+    );
+  }
+
+  div:hover {
+  transform: scale(1.1);
+}
+  
+</style>
+
+<div></div>
+```
+
+3. The next function of the transform property is __skewX()__, which skews the selected element along its X (horizontal) axis by a given degree.
+
+Given that the __skewX()__ function skews the selected element along the X-axis by a given degree, it is no surprise that the __skewY()__ property skews an element along the Y (vertical) axis.
+
+
+```html
+<style>
+  div { 
+    width: 70%;
+    height: 100px;
+    margin:  50px auto;
+  }
+  #top {
+    background-color: red;
+    transform: skewY(-10deg);
+  }
+  #bottom {
+    background-color: blue;
+    transform: skewX(24deg);
+  }
+</style>
+
+<div id="top"></div>
+<div id="bottom"></div>
+```
+
+4. By manipulating different selectors and properties, you can make interesting shapes. One of the easier ones to try is a crescent moon shape. You need to work with the __box-shadow__ property that sets the shadow of an element, along with the __border-radius__ property that controls the roundness of the element's corners. You will create a round, transparent object with a crisp shadow that is slightly offset to the side - the shadow is actually going to be the moon shape you see.
+
+In order to create a round object, the __border-radius__ property should be set to a value of 50%.
+
+The __box-shadow__ property takes values for _offset-x_, _offset-y_, _blur-radius_, _spread-radius_ and a _color_ value in that order. The _blur-radius_ and _spread-radius_ values are optional.
+
+
+```html
+<style>
+.center
+{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 25px 10px 0 0 blue; 
+}
+
+</style>
+<div class="center"></div>
+```
+
+
+5. One of the most popular shapes in the world is the heart shape. First you need to understand the __::before__ and __::after__ pseudo-elements. These pseudo-elements are used to add something before or after a selected element. In the following example, a __::before__ pseudo-element is used to add a rectangle to an element with the class heart:
+
+```html
+.heart::before {
+  content: "";
+  background-color: yellow;
+  border-radius: 25%;
+  position: absolute;
+  height: 50px;
+  width: 70px;
+  top: -50px;
+  left: 5px;
+}
+```
+
+For the __::before__ and __::after__ pseudo-elements to function properly, they must have a defined __content__ property. This property is usually used to add things like a photo or text to the selected element. When the __::before__ and __::after__ pseudo-elements are used to make shapes, the content property is still required, but it's set to an empty string.
+
+In the above example, the element with the class of heart has a __::before__ pseudo-element that produces a yellow rectangle with height and width of 50px and 70px, respectively. This rectangle has round corners due to its 25% border radius and is positioned absolutely at 5px from the left and 50px above the top of the element.
+
+
+```html
+<style>
+.heart {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: pink;
+  height: 50px;
+  width: 50px;
+  transform: rotate(-45deg);
+}
+.heart::after {
+  background-color: pink;
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0px;
+  left: 25px;
+}
+.heart::before {
+  content: "";
+  background-color: pink;
+  border-radius: 50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: -25px;
+  left: 0px;
+}
+</style>
+<div class = "heart"></div>
+```
+
+6. To animate an element, you need to know about the animation properties and the @keyframes rule. The animation properties control how the animation should behave and the @keyframes rule controls what happens during that animation. There are eight animation properties in total. This challenge will keep it simple and cover the two most important ones first:
+
+animation-name sets the name of the animation, which is later used by @keyframes to tell CSS which rules go with which animations.
+
+animation-duration sets the length of time for the animation.
+
+@keyframes is how to specify exactly what happens within the animation over the duration. This is done by giving CSS properties for specific "frames" during the animation, with percentages ranging from 0% to 100%. If you compare this to a movie, the CSS properties for 0% is how the element displays in the opening scene. The CSS properties for 100% is how the element appears at the end, right before the credits roll. Then CSS applies the magic to transition the element over the given duration to act out the scene. Here's an example to illustrate the usage of @keyframes and the animation properties:
+
+```html
+#anim {
+  animation-name: colorful;
+  animation-duration: 3s;
+}
+@keyframes colorful {
+  0% {
+    background-color: blue;
+  }
+  100% {
+    background-color: yellow;
+  }
+}
+```
+
+For the element with the anim id, the code snippet above sets the animation-name to colorful and sets the animation-duration to 3 seconds. Then the @keyframes rule links to the animation properties with the name colorful. It sets the color to blue at the beginning of the animation (0%) which will transition to yellow by the end of the animation (100%). You aren't limited to only beginning-end transitions, you can set properties for the element for any percentage between 0% and 100%.
+
+
+```html
+<style>
+  div {
+    height: 40px;
+    width: 70%;
+    background: black;
+    margin: 50px auto;
+    border-radius: 5px;
+  }
+
+  #rect {
+    animation-name: rainbow;
+    animation-duration: 4s;   
+  }
+
+  @keyframes rainbow {
+    0% {
+      background-color: blue;
+    }
+    50% {
+      background-color: green;
+    }
+    100% {
+      background-color: yellow;
+    }
+  }
+   
+</style>
+<div id="rect"></div>
+```
+
+You can use CSS @keyframes to change the color of a button in its hover state.
+
+Here's an example of changing the width of an image on hover:
+
+```html
+<style>
+  img:hover {
+    animation-name: width;
+    animation-duration: 500ms;
+  }
+
+  @keyframes width {
+    100% {
+      width: 40px;
+    }
+  }
+</style>
+
+<img src="https://bit.ly/smallgooglelogo" alt="Google's Logo" />
+```
+
+That's great, but it doesn't work right yet. Notice how the animation resets after 500ms has passed, causing the button to revert back to the original color. You want the button to stay highlighted.
+
+This can be done by setting the animation-fill-mode property to forwards. The animation-fill-mode specifies the style applied to an element when the animation has finished. You can set it like so:
+
+animation-fill-mode: forwards;
+
+
+```html
+<style>
+  button {
+    border-radius: 5px;
+    color: white;
+    background-color: #0F5897;
+    padding: 5px 10px 8px 10px;
+  }
+  
+  button:hover {
+    animation-name: background-color;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes background-color {
+    100% {
+      background-color: #4791d0;
+    }
+  }
+  
+  
+</style>
+  
+<button>Register</button>
+```
+
+When elements have a specified position, such as fixed or relative, the CSS offset properties right, left, top, and bottom can be used in animation rules to create movement.
+
+As shown in the example below, you can push the item downwards then upwards by setting the top property of the 50% keyframe to 50px, but having it set to 0px for the first (0%) and the last (100%) keyframe.
+
+```html
+@keyframes rainbow {
+  0% {
+    background-color: blue;
+    top: 0px;
+  }
+  50% {
+    background-color: green;
+    top: 50px;
+  }
+  100% {
+    background-color: yellow;
+    top: 0px;
+  }
+} 
+```
+
+The previous challenges covered how to use some of the animation properties and the @keyframes rule. Another animation property is the animation-iteration-count, which allows you to control how many times you would like to loop through the animation. Here's an example:
+
+animation-iteration-count: infinite;
+
+
+```html
+<style>
+  div {
+    height: 40px;
+    width: 70%;
+    background: black;
+    margin: 50px auto;
+    border-radius: 5px;
+    position: relative;
+  }
+
+#rect {
+  animation-name: rainbow;
+  animation-duration: 4s;
+}
+
+@keyframes rainbow {
+  0% {
+    background-color: blue;
+    top: 0px;
+    left: 0px;
+  }
+  50% {
+    background-color: green;
+    top: 50px;
+    left: 25px;
+  }
+  100% {
+    background-color: yellow;
+    top: 0px;
+    left: -25px;
+  }
+}
+</style>
+
+<div id="rect"></div>
+```
+
+
+In CSS animations, the animation-timing-function property controls how quickly an animated element changes over the duration of the animation. If the animation is a car moving from point A to point B in a given time (your animation-duration), the animation-timing-function says how the car accelerates and decelerates over the course of the drive.
+
+There are a number of predefined keywords available for popular options. For example, the default value is ease, which starts slow, speeds up in the middle, and then slows down again in the end. Other options include ease-out, which is quick in the beginning then slows down, ease-in, which is slow in the beginning, then speeds up at the end, or linear, which applies a constant animation speed throughout.
+
+
+```html
+<style>
+
+  .balls {
+    border-radius: 50%;
+    background: linear-gradient(
+      35deg,
+      #ccffff,
+      #ffcccc
+    );
+    position: fixed;  
+    width: 50px;
+    height: 50px;
+    margin-top: 50px;
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  #ball1 { 
+    left:27%;
+    animation-timing-function: linear;
+  }
+  #ball2 { 
+    left:56%;
+    animation-timing-function: ease-out;
+  }
+
+@keyframes bounce {
+  0% {
+    top: 0px;
+  } 
+  100% {
+    top: 249px;
+  }
+} 
+
+</style>
+
+<div class="balls" id="ball1"></div>
+<div class="balls" id="ball2"></div>
+```
+
+CSS offers an option other than keywords that provides even finer control over how the animation plays out, through the use of Bezier curves.
+
+In CSS animations, Bezier curves are used with the cubic-bezier function. The shape of the curve represents how the animation plays out. The curve lives on a 1 by 1 coordinate system. The X-axis of this coordinate system is the duration of the animation (think of it as a time scale), and the Y-axis is the change in the animation.
+
+The cubic-bezier function consists of four main points that sit on this 1 by 1 grid: p0, p1, p2, and p3. p0 and p3 are set for you - they are the beginning and end points which are always located respectively at the origin (0, 0) and (1, 1). You set the x and y values for the other two points, and where you place them in the grid dictates the shape of the curve for the animation to follow. This is done in CSS by declaring the x and y values of the p1 and p2 "anchor" points in the form: (x1, y1, x2, y2). Pulling it all together, here's an example of a Bezier curve in CSS code:
+
+animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+
+In the example above, the x and y values are equivalent for each point (x1 = 0.25 = y1 and x2 = 0.75 = y2), which if you remember from geometry class, results in a line that extends from the origin to point (1, 1). This animation is a linear change of an element during the length of an animation, and is the same as using the linear keyword. In other words, it changes at a constant speed.
