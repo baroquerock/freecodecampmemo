@@ -201,3 +201,69 @@ One key difference between the fixed and absolute positions is that an element w
 <div></div>
 ```
 
+## Color
+
+1. CSS provides the ability to use color transitions, otherwise known as gradients, on elements. This is accessed through the background property's __linear-gradient()__ function. Here is the general syntax:
+
+_background: linear-gradient(gradient_direction, color 1, color 2, color 3, ...);_
+
+The first argument specifies the direction from which color transition starts - it can be stated as a degree, where 90deg makes a vertical gradient and 45deg is angled like a backslash. The following arguments specify the order of colors used in the gradient.
+
+```html
+<style>
+
+  div{ 
+    border-radius: 20px;
+    width: 70%;
+    height: 400px;
+    margin: 50px auto;
+    background: linear-gradient(35deg, #CCFFFF, #FFCCCC);
+  }
+
+</style>
+
+<div></div>
+```
+
+2. The __repeating-linear-gradient()__ function is very similar to __ linear-gradient()__  with the major difference that it repeats the specified gradient pattern. __ repeating-linear-gradient()__  accepts a variety of values. The angle value is the direction of the gradient. Color stops are like width values that mark where a transition takes place, and are given with a percentage or a number of pixels.
+
+In the example the gradient starts with the color yellow at 0 pixels which blends into the second color blue at 40 pixels away from the start. Since the next color stop is also at 40 pixels, the gradient immediately changes to the third color green, which itself blends into the fourth color value red as that is 80 pixels away from the beginning of the gradient.
+
+For this example, it helps to think about the color stops as pairs where every two colors blend together.
+
+_0px [yellow -- blend -- blue] 40px [green -- blend -- red] 80px_
+
+If every two color stop values are the same color, the blending isn't noticeable because it's between the same color, followed by a hard transition to the next color, so you end up with stripes. 
+
+
+```html
+<style>
+
+  div{ 
+    border-radius: 20px;
+    width: 70%;
+    height: 400px;
+    margin:  50 auto;
+    background: repeating-linear-gradient(
+      45deg,
+      yellow 0px,
+      yellow 40px,
+      black 40px,
+      black 80px
+    );
+  }
+
+</style>
+
+<div></div>
+```
+
+3. One way to add texture and interest to a background and have it stand out more is to add a subtle pattern. The key is balance, as you don't want the background to stand out too much, and take away from the foreground. The background property supports the __url()__ function in order to link to an image of the chosen texture or pattern. The link address is wrapped in quotes inside the parentheses.
+
+```html
+<style>
+  body {
+    background: url(https://i.imgur.com/MJAkxbh.png)
+  }
+</style>
+```
