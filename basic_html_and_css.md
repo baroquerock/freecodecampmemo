@@ -36,17 +36,44 @@ Here's an example of a page's layout:
 4. __font-family: FAMILY_NAME, GENERIC_NAME;__  
 The __GENERIC_NAME__ is a fallback font in case the other specified font is not available.
 
-5. __#cat-photo-form__ is an id selector. It is not reusable and should only be applied to one element. 
-It has a higher specificity (importance) than a class so if both are applied to the same element and have conflicting styles, the styles of the id will be applied.
+5. __#cat-photo-form__ is an id selector. It is not reusable and should only be applied to one element. It has a higher specificity (importance) than a class so if both are applied to the same element and have conflicting styles, the styles of the id will be applied.
 
 6. __[attr=value]__ is an attribute selector. This selector matches and styles elements with a specific attribute value.
 
 7. Google Fonts is a free library of web fonts that you can use in your CSS by referencing the font's URL.
 
+## Links
+
+
+1. __target="\_blank"__ attribute from the anchor tag causes the link to open in a new window tab: 
+
+```html
+<a href="#footer" target="_blank">cat photos</a>
+```
+
+2. __href="#someid"__ attribute creates an internal link: a hash symbol _#_ plus the value of the id attribute for the element that you want to internally link to. You then need to add the same id attribute to the element you are linking to. An id is an attribute that uniquely describes an element.
+
+Example:
+
+```html
+<a href="#contacts-header">Contacts</a>
+...
+<h2 id="contacts-header">Contacts</h2>
+```
+
+3. __href="#"__ attribute creates a dead link
+
+
+## Images
+
+1. All img elements must have an __alt__ attribute. The text inside an __alt__ attribute is used for screen readers to 
+improve accessibility and is displayed if the image fails to load. If the image is purely decorative, using an empty alt attribute is a best practice.
+
+2. Nesting __\<img\>__ inside __\<a\>__ can make a link out of an image.
 
 
 
-
+## Sample code
 
 ```html
 
