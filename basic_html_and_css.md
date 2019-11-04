@@ -1,5 +1,19 @@
 # Basic HTML and CSS
 
+The <!DOCTYPE ...> tag shows the version of HTML. For HTML5, you use <!DOCTYPE html>.
+The ! and uppercase DOCTYPE is important, especially for older browsers. The html is not case sensitive.
+
+Here's an example of a page's layout:
+
+```html
+<!DOCTYPE html>
+<html>
+  <head> </head> (Metadata elements - link, meta, title, style)
+  <body> </body> (Content of the page)
+</html>
+```
+
+
 
 ```html
 
@@ -67,8 +81,6 @@
 
         <div class="silver-background">
 
-
-
             <p>Things cats love:</p>
             <ul>
                 <li>cat nip</li>
@@ -81,6 +93,7 @@
                 <li>thunder</li>
                 <li>other cats</li>
             </ol>
+
         </div>
 
         <form action="/submit-cat-photo" id="cat-photo-form">
