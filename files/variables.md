@@ -17,6 +17,8 @@ In order to provide a browser fallback, provide another more widely supported va
 
 When you create a variable, it becomes available for you to use inside the element in which you create it. It also becomes available within any elements nested within it. This effect is known as cascading. Because of cascading, CSS variables are often defined in the __:root__ element. You can think of the __:root__ element as a container for your entire HTML document, in the same way that an html element is a container for the body element.
 
+## Sample code
+
 ```html
 <style>
   :root {
