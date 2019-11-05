@@ -28,7 +28,7 @@ __auto__ sets the column or row to the width or height of its content automatica
 
 __%__ adjusts the column or row to the percent width of its container.
 
-Here's the code that generates the output in the preview:
+For example:
 
 __grid-template-columns: auto 50px 10% 2fr 1fr;__
 
