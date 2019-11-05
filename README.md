@@ -12,5 +12,10 @@ The text and examples are not written by me (mostly) and were taken from the Fre
 4. [Padding and margin in CSS](files/padding_margin.md)
 5. [Variables in CSS](files/variables.md)
 6. [Inheritance in CSS](files/inheritance.md)
+7. [Accessibility](files/accessibility.md)
+8. [CSS flexbox](files/css_flexbox.md)
+9. [CSS grid](files/css_grid.md)
+10. [Responsive web design principles](files/responsive_web_design.md)
+
 
 
