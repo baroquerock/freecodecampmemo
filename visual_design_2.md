@@ -445,15 +445,17 @@ In the above example, the element with the class of heart has a __::before__ pse
 <div class = "heart"></div>
 ```
 
-6. To animate an element, you need to know about the animation properties and the @keyframes rule. The animation properties control how the animation should behave and the @keyframes rule controls what happens during that animation. There are eight animation properties in total. This challenge will keep it simple and cover the two most important ones first:
+6. To animate an element, you need to know about the __animation__ properties and the __@keyframes__ rule. The __animation__ properties control how the animation should behave and the __@keyframes__ rule controls what happens during that animation. There are eight animation properties in total. The two most important ones first:
 
-animation-name sets the name of the animation, which is later used by @keyframes to tell CSS which rules go with which animations.
+__animation-name__ sets the name of the animation, which is later used by __@keyframes__ to tell CSS which rules go with which animations.
 
-animation-duration sets the length of time for the animation.
+__animation-duration__ sets the length of time for the animation.
 
-@keyframes is how to specify exactly what happens within the animation over the duration. This is done by giving CSS properties for specific "frames" during the animation, with percentages ranging from 0% to 100%. If you compare this to a movie, the CSS properties for 0% is how the element displays in the opening scene. The CSS properties for 100% is how the element appears at the end, right before the credits roll. Then CSS applies the magic to transition the element over the given duration to act out the scene. Here's an example to illustrate the usage of @keyframes and the animation properties:
+__@keyframes__ is how to specify exactly what happens within the animation over the duration. This is done by giving CSS properties for specific "frames" during the animation, with percentages ranging from 0% to 100%. If you compare this to a movie, the CSS properties for 0% is how the element displays in the opening scene. The CSS properties for 100% is how the element appears at the end, right before the credits roll. Then CSS applies the magic to transition the element over the given duration to act out the scene. Here's an example to illustrate the usage of __@keyframes__ and the animation properties:
+
 
 ```html
+
 #anim {
   animation-name: colorful;
   animation-duration: 3s;
@@ -468,7 +470,7 @@ animation-duration sets the length of time for the animation.
 }
 ```
 
-For the element with the anim id, the code snippet above sets the animation-name to colorful and sets the animation-duration to 3 seconds. Then the @keyframes rule links to the animation properties with the name colorful. It sets the color to blue at the beginning of the animation (0%) which will transition to yellow by the end of the animation (100%). You aren't limited to only beginning-end transitions, you can set properties for the element for any percentage between 0% and 100%.
+For the element with the _anim_ id, the code snippet above sets the __animation-name__ to _colorful_ and sets the __animation-duration__ to 3 seconds. Then the __@keyframes__ rule links to the animation properties with the name colorful. It sets the color to blue at the beginning of the animation (0%) which will transition to yellow by the end of the animation (100%). You aren't limited to only beginning-end transitions, you can set properties for the element for any percentage between 0% and 100%.
 
 
 ```html
@@ -502,9 +504,7 @@ For the element with the anim id, the code snippet above sets the animation-name
 <div id="rect"></div>
 ```
 
-You can use CSS @keyframes to change the color of a button in its hover state.
-
-Here's an example of changing the width of an image on hover:
+7. You can use CSS __@keyframes__ to change the color of a button in its _hover_ state. Here's an example of changing the width of an image on hover:
 
 ```html
 <style>
@@ -523,11 +523,9 @@ Here's an example of changing the width of an image on hover:
 <img src="https://bit.ly/smallgooglelogo" alt="Google's Logo" />
 ```
 
-That's great, but it doesn't work right yet. Notice how the animation resets after 500ms has passed, causing the button to revert back to the original color. You want the button to stay highlighted.
+That's great, but right now the animation resets after 500ms has passed, causing the button to revert back to the original color. You want the button to stay highlighted. This can be done by setting the __animation-fill-mode__ property to forwards. The __animation-fill-mode__ specifies the style applied to an element when the animation has finished. You can set it like so:
 
-This can be done by setting the animation-fill-mode property to forwards. The animation-fill-mode specifies the style applied to an element when the animation has finished. You can set it like so:
-
-animation-fill-mode: forwards;
+__animation-fill-mode: forwards;__
 
 
 ```html
@@ -557,9 +555,7 @@ animation-fill-mode: forwards;
 <button>Register</button>
 ```
 
-When elements have a specified position, such as fixed or relative, the CSS offset properties right, left, top, and bottom can be used in animation rules to create movement.
-
-As shown in the example below, you can push the item downwards then upwards by setting the top property of the 50% keyframe to 50px, but having it set to 0px for the first (0%) and the last (100%) keyframe.
+8. When elements have a specified position, such as fixed or relative, the CSS __offset__ properties right, left, top, and bottom can be used in animation rules to create movement. As shown in the example below, you can push the item downwards then upwards by setting the top property of the 50% keyframe to 50px, but having it set to 0px for the first (0%) and the last (100%) keyframe.
 
 ```html
 @keyframes rainbow {
@@ -578,53 +574,14 @@ As shown in the example below, you can push the item downwards then upwards by s
 } 
 ```
 
-The previous challenges covered how to use some of the animation properties and the @keyframes rule. Another animation property is the animation-iteration-count, which allows you to control how many times you would like to loop through the animation. Here's an example:
+9. Another animation property is the __animation-iteration-count__, which allows you to control how many times you would like to loop through the animation. Here's an example:
 
-animation-iteration-count: infinite;
-
-
-```html
-<style>
-  div {
-    height: 40px;
-    width: 70%;
-    background: black;
-    margin: 50px auto;
-    border-radius: 5px;
-    position: relative;
-  }
-
-#rect {
-  animation-name: rainbow;
-  animation-duration: 4s;
-}
-
-@keyframes rainbow {
-  0% {
-    background-color: blue;
-    top: 0px;
-    left: 0px;
-  }
-  50% {
-    background-color: green;
-    top: 50px;
-    left: 25px;
-  }
-  100% {
-    background-color: yellow;
-    top: 0px;
-    left: -25px;
-  }
-}
-</style>
-
-<div id="rect"></div>
-```
+__animation-iteration-count: infinite;__
 
 
-In CSS animations, the animation-timing-function property controls how quickly an animated element changes over the duration of the animation. If the animation is a car moving from point A to point B in a given time (your animation-duration), the animation-timing-function says how the car accelerates and decelerates over the course of the drive.
+In CSS animations, the __animation-timing-function__ property controls how quickly an animated element changes over the duration of the animation. If the animation is a car moving from point A to point B in a given time (your __animation-duration__), the __animation-timing-function__ says how the car accelerates and decelerates over the course of the drive.
 
-There are a number of predefined keywords available for popular options. For example, the default value is ease, which starts slow, speeds up in the middle, and then slows down again in the end. Other options include ease-out, which is quick in the beginning then slows down, ease-in, which is slow in the beginning, then speeds up at the end, or linear, which applies a constant animation speed throughout.
+There are a number of predefined keywords available for popular options. For example, the default value is _ease_, which starts slow, speeds up in the middle, and then slows down again in the end. Other options include _ease-out_, which is quick in the beginning then slows down, _ease-in_, which is slow in the beginning, then speeds up at the end, or _linear_, which applies a constant animation speed throughout.
 
 
 ```html
@@ -669,12 +626,10 @@ There are a number of predefined keywords available for popular options. For exa
 <div class="balls" id="ball2"></div>
 ```
 
-CSS offers an option other than keywords that provides even finer control over how the animation plays out, through the use of Bezier curves.
-
-In CSS animations, Bezier curves are used with the cubic-bezier function. The shape of the curve represents how the animation plays out. The curve lives on a 1 by 1 coordinate system. The X-axis of this coordinate system is the duration of the animation (think of it as a time scale), and the Y-axis is the change in the animation.
+10. CSS offers an option other than keywords that provides even finer control over how the animation plays out, through the use of __Bezier curves__. In CSS animations, Bezier curves are used with the cubic-bezier function. The shape of the curve represents how the animation plays out. The curve lives on a 1 by 1 coordinate system. The X-axis of this coordinate system is the duration of the animation (think of it as a time scale), and the Y-axis is the change in the animation.
 
 The cubic-bezier function consists of four main points that sit on this 1 by 1 grid: p0, p1, p2, and p3. p0 and p3 are set for you - they are the beginning and end points which are always located respectively at the origin (0, 0) and (1, 1). You set the x and y values for the other two points, and where you place them in the grid dictates the shape of the curve for the animation to follow. This is done in CSS by declaring the x and y values of the p1 and p2 "anchor" points in the form: (x1, y1, x2, y2). Pulling it all together, here's an example of a Bezier curve in CSS code:
 
-animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+__animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);__
 
 In the example above, the x and y values are equivalent for each point (x1 = 0.25 = y1 and x2 = 0.75 = y2), which if you remember from geometry class, results in a line that extends from the origin to point (1, 1). This animation is a linear change of an element during the length of an animation, and is the same as using the linear keyword. In other words, it changes at a constant speed.
