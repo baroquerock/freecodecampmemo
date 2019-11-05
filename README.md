@@ -10,3 +10,6 @@ The text and examples are not written by me (mostly) and were taken from the Fre
 2. [Elements of visual design](files/visual_design.md) (text)
 3. [Elements of visual design](files/visual_design_2.md) (positioning, pseudo-classes and animation)
 4. [Padding and margin in CSS](files/padding_margin.md)
+5. [Variables in CSS](files/variables.md)
+
+
