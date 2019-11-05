@@ -49,7 +49,10 @@ Here is an example of an image that is only using half of the original height an
 
 The four different viewport units are:
 
-__vw: 10vw__ would be 10% of the viewport's width.
-__vh: 3vh__ would be 3% of the viewport's height.
-__vmin: 70vmin__ would be 70% of the viewport's smaller dimension (height vs. width).
-__vmax: 100vmax__ would be 100% of the viewport's bigger dimension (height vs. width).
+__vw: 10vw__ would be 10% of the viewport's width
+
+__vh: 3vh__ would be 3% of the viewport's height
+
+__vmin: 70vmin__ would be 70% of the viewport's smaller dimension (height vs. width)
+
+__vmax: 100vmax__ would be 100% of the viewport's bigger dimension (height vs. width)
