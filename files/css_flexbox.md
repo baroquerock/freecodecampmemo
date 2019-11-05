@@ -12,8 +12,7 @@ _Note_: the default value for the __flex-direction__ property is row.
 
 Here is a useful image showing a row to illustrate the concepts below:
 
-Inline-style: 
-![flexbox](https://www.w3.org/TR/css-flexbox-1/images/flex-direction-terms.svg)
+[flexbox](https://www.w3.org/TR/css-flexbox-1/images/flex-direction-terms.svg)
 
 Recall that setting a flex container as a row places the flex items side-by-side from left-to-right. A flex container set as a column places the flex items in a vertical stack from top-to-bottom. For each, the direction the flex items are arranged is called the main axis. For a row, this is a horizontal line that cuts through each item. And for a column, the main axis is a vertical line through the items.
 
