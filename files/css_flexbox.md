@@ -18,13 +18,13 @@ Recall that setting a flex container as a row places the flex items side-by-side
 
 There are several options for how to space the flex items along the line that is the main axis. One of the most commonly used is __justify-content: center;__ (aligns all the flex items to the center inside the flex container). Others options include:
 
-__flex-start__ aligns items to the start of the flex container. For a row, this pushes the items to the left of the container. For a column, this pushes the items to the top of the container
+__flex-start__ aligns items to the start of the flex container. For a row, this pushes the items to the left of the container. For a column, this pushes the items to the top of the container.
 
-__flex-end__ aligns items to the end of the flex container. For a row, this pushes the items to the right of the container. For a column, this pushes the items to the bottom of the container
+__flex-end__ aligns items to the end of the flex container. For a row, this pushes the items to the right of the container. For a column, this pushes the items to the bottom of the container.
 
-__space-between__ aligns items to the center of the main axis, with extra space placed between the items. The first and last items are pushed to the very edge of the flex container. For example, in a row the first item is against the left side of the container, the last item is against the right side of the container, then the other items between them are spaced evenly
+__space-between__ aligns items to the center of the main axis, with extra space placed between the items. The first and last items are pushed to the very edge of the flex container. For example, in a row the first item is against the left side of the container, the last item is against the right side of the container, then the other items between them are spaced evenly.
 
-__space-around__ similar to space-between but the first and last items are not locked to the edges of the container, the space is distributed around all the items
+__space-around__ similar to space-between but the first and last items are not locked to the edges of the container, the space is distributed around all the items.
 
 
 3. The __align-items__ property is similar to __justify-content__. Recall that the __justify-content__ property aligned flex items along the main axis. For rows, the main axis is a horizontal line and for columns it is a vertical line.
@@ -35,13 +35,13 @@ CSS offers the __align-items__ property to align flex items along the _cross axi
 
 The different values available for __align-items__ include:
 
-__flex-start__ aligns items to the start of the flex container. For rows, this aligns items to the top of the container. For columns, this aligns items to the left of the container
+__flex-start__ aligns items to the start of the flex container. For rows, this aligns items to the top of the container. For columns, this aligns items to the left of the container.
 
-__flex-end__ aligns items to the end of the flex container. For rows, this aligns items to the bottom of the container. For columns, this aligns items to the right of the container
+__flex-end__ aligns items to the end of the flex container. For rows, this aligns items to the bottom of the container. For columns, this aligns items to the right of the container.
 
-__center__ align items to the center. For rows, this vertically aligns items (equal space above and below the items). For columns, this horizontally aligns them (equal space to the left and right of the items)
+__center__ align items to the center. For rows, this vertically aligns items (equal space above and below the items). For columns, this horizontally aligns them (equal space to the left and right of the items).
 
-__stretch__ stretch the items to fill the flex container. For example, rows items are stretched to fill the flex container top-to-bottom
+__stretch__ stretch the items to fill the flex container. For example, rows items are stretched to fill the flex container top-to-bottom.
 
 __baseline__ align items to their baselines. Baseline is a text concept, think of it as the line that the letters sit on.
 
@@ -80,11 +80,11 @@ However, using the __flex-wrap__ property, it tells CSS to wrap items. This mean
 
 CSS also has options for the direction of the wrap:
 
-__nowrap__ this is the default setting, and does not wrap items
+__nowrap__ this is the default setting, and does not wrap items.
 
-__wrap__ wraps items from left-to-right if they are in a row, or top-to-bottom if they are in a column
+__wrap__ wraps items from left-to-right if they are in a row, or top-to-bottom if they are in a column.
 
-__wrap-reverse__ wraps items from bottom-to-top if they are in a row, or right-to-left if they are in a column
+__wrap-reverse__ wraps items from bottom-to-top if they are in a row, or right-to-left if they are in a column.
 
 
 
