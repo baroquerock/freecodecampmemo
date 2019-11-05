@@ -11,5 +11,6 @@ The text and examples are not written by me (mostly) and were taken from the Fre
 3. [Elements of visual design](files/visual_design_2.md) (positioning, pseudo-classes and animation)
 4. [Padding and margin in CSS](files/padding_margin.md)
 5. [Variables in CSS](files/variables.md)
+6. [Inheritance in CSS](files/inheritance.md)
 
 
