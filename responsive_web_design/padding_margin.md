@@ -61,3 +61,7 @@ Relative units, such as __em__ or __rem__, are relative to another length value.
   <h5 class="box blue-box">padding</h5>
 </div>
 ```
+
+## Result
+
+<img src="../pics/2_padding.png" alt="alt text" width="400"> 

@@ -17,6 +17,8 @@ In order to provide a browser fallback, provide another more widely supported va
 
 When you create a variable, it becomes available for you to use inside the element in which you create it. It also becomes available within any elements nested within it. This effect is known as cascading. Because of cascading, CSS variables are often defined in the __:root__ element. You can think of the __:root__ element as a container for your entire HTML document, in the same way that an html element is a container for the body element.
 
+CSS Variables can simplify the way you use media queries. For instance, when your screen is smaller or larger than your media query break point, you can change the value of a variable, and it will apply its style wherever it is used.
+
 ## Sample code
 
 ```html
@@ -249,3 +251,10 @@ When you create a variable, it becomes available for you to use inside the eleme
   </div>
 </div>
 ```
+
+
+## Result
+
+Media query on             |  Media query off
+:-------------------------:|:-------------------------:
+<img src="../pics/4_small.png" alt="alt text" width="300">  |  <img src="../pics/4_small.png" alt="alt text" width="300"> 

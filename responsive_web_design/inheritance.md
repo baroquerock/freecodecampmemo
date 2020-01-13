@@ -29,3 +29,7 @@ However, the order of the class declarations in the \<style\> section are also i
 
 <h1 id="orange-text" class="pink-text blue-text" style="color: white">Hello World!</h1>
 ```
+
+## Result
+
+<img src="../pics/3_inheritance.png" alt="alt text" width="400"> 
