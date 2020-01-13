@@ -53,6 +53,8 @@ Changing an element's position to relative does not remove it from the normal fl
 </body>
 ```
 
+<img src="../pics/6_relative.png" alt="alt text" width="150">
+
 3. Positioning gives you a lot of flexibility and power over the visual layout of a page. It's good to remember that no matter the position of elements, the underlying HTML markup should be organized and make sense when read from top to bottom. This is how users with visual impairments (who rely on assistive devices like screen readers) access your content.
 
 
@@ -84,6 +86,8 @@ One nuance with absolute positioning is that it will be locked relative to its c
   </section>
 </body>
 ```
+
+<img src="../pics/6_absolute.png" alt="alt text" width="150">
 
 5. The next layout scheme that CSS offers is the fixed position, which is a type of absolute positioning that locks an element relative to the browser window. Similar to absolute positioning, it's used with the CSS offset properties and also removes the element from the normal flow of the document. Other items no longer "realize" where it is positioned, which may require some layout adjustments elsewhere.
 
@@ -125,6 +129,9 @@ One key difference between the fixed and absolute positions is that an element w
 </body>
 ```
 
+<img src="../pics/6_fixed.png" alt="alt text" width="150">
+
+
 6. The next positioning tool does not actually use position, but sets the __float__ property of an element. Floating elements are removed from the normal flow of a document and pushed to either the left or right of their containing parent element. It's commonly used with the __width__ property to specify how much horizontal space the floated element requires.
 
 ```html
@@ -159,6 +166,9 @@ One key difference between the fixed and absolute positions is that an element w
 </body>
 ```
 
+<img src="../pics/6_float.png" alt="alt text" width="150">
+
+
 7. When elements are positioned to overlap, the element coming later in the HTML markup will, by default, appear on the top of the other elements. However, the __z-index__ property can specify the order of how elements are stacked on top of one another. It must be an integer (i.e. a whole number and not a decimal), and higher values for the __z-index__ property of an element move it higher in the stack than those with lower values.
 
 ```html
@@ -187,6 +197,9 @@ One key difference between the fixed and absolute positions is that an element w
 <div class="second"></div>
 ```
 
+<img src="../pics/6_z_index.png" alt="alt text" width="150">
+
+
 8. Another positioning technique is to center a block element horizontally. One way to do this is to set its margin to a value of auto. This method works for images, too. Images are inline elements by default, but can be changed to block elements when you set the display property to block.
 
 ```html
@@ -200,6 +213,9 @@ One key difference between the fixed and absolute positions is that an element w
 </style>
 <div></div>
 ```
+
+<img src="../pics/6_z_margin.png" alt="alt text" width="150">
+
 
 ## Color
 
@@ -224,6 +240,9 @@ The first argument specifies the direction from which color transition starts - 
 
 <div></div>
 ```
+
+<img src="../pics/6_gradient.png" alt="alt text" width="150">
+
 
 2. The __repeating-linear-gradient()__ function is very similar to __ linear-gradient()__  with the major difference that it repeats the specified gradient pattern. __ repeating-linear-gradient()__  accepts a variety of values. The angle value is the direction of the gradient. Color stops are like width values that mark where a transition takes place, and are given with a percentage or a number of pixels.
 
@@ -258,6 +277,9 @@ If every two color stop values are the same color, the blending isn't noticeable
 <div></div>
 ```
 
+<img src="../pics/6_stripes.png" alt="alt text" width="150">
+
+
 3. One way to add texture and interest to a background and have it stand out more is to add a subtle pattern. The key is balance, as you don't want the background to stand out too much, and take away from the foreground. The background property supports the __url()__ function in order to link to an image of the chosen texture or pattern. The link address is wrapped in quotes inside the parentheses.
 
 ```html
@@ -267,6 +289,8 @@ If every two color stop values are the same color, the blending isn't noticeable
   }
 </style>
 ```
+
+<img src="../pics/6_texture.png" alt="alt text" width="150">
 
 
 ## Transformations
@@ -304,6 +328,9 @@ If every two color stop values are the same color, the blending isn't noticeable
 <div class="ball" id= "ball2"></div>
 ```
 
+<img src="../pics/6_scale.png" alt="alt text" width="150">
+
+
 2. The __transform__ property has a variety of functions that lets you scale, move, rotate, skew, etc., your elements. When used with pseudo-classes such as __:hover__ that specify a certain state of an element, the transform property can easily add interactivity to your elements.
 
 Here's an example to scale the div elements to 1.1 times their original size when a user hovers over them:
@@ -331,6 +358,7 @@ Here's an example to scale the div elements to 1.1 times their original size whe
 <div></div>
 ```
 
+
 3. The next function of the transform property is __skewX()__, which skews the selected element along its X (horizontal) axis by a given degree.
 
 Given that the __skewX()__ function skews the selected element along the X-axis by a given degree, it is no surprise that the __skewY()__ property skews an element along the Y (vertical) axis.
@@ -356,6 +384,9 @@ Given that the __skewX()__ function skews the selected element along the X-axis 
 <div id="top"></div>
 <div id="bottom"></div>
 ```
+
+<img src="../pics/6_skew.png" alt="alt text" width="150">
+
 
 4. By manipulating different selectors and properties, you can make interesting shapes. One of the easier ones to try is a crescent moon shape. You need to work with the __box-shadow__ property that sets the shadow of an element, along with the __border-radius__ property that controls the roundness of the element's corners. You will create a round, transparent object with a crisp shadow that is slightly offset to the side - the shadow is actually going to be the moon shape you see.
 
@@ -385,6 +416,8 @@ The __box-shadow__ property takes values for _offset-x_, _offset-y_, _blur-radiu
 </style>
 <div class="center"></div>
 ```
+
+<img src="../pics/6_moon.png" alt="alt text" width="150">
 
 
 5. One of the most popular shapes in the world is the heart shape. First you need to understand the __::before__ and __::after__ pseudo-elements. These pseudo-elements are used to add something before or after a selected element. In the following example, a __::before__ pseudo-element is used to add a rectangle to an element with the class heart:
@@ -445,6 +478,9 @@ In the above example, the element with the class of heart has a __::before__ pse
 <div class = "heart"></div>
 ```
 
+<img src="../pics/6_heart.png" alt="alt text" width="150">
+
+
 6. To animate an element, you need to know about the __animation__ properties and the __@keyframes__ rule. The __animation__ properties control how the animation should behave and the __@keyframes__ rule controls what happens during that animation. There are eight animation properties in total. The two most important ones first:
 
 __animation-name__ sets the name of the animation, which is later used by __@keyframes__ to tell CSS which rules go with which animations.
@@ -504,23 +540,31 @@ For the element with the _anim_ id, the code snippet above sets the __animation-
 <div id="rect"></div>
 ```
 
-7. You can use CSS __@keyframes__ to change the color of a button in its _hover_ state. Here's an example of changing the width of an image on hover:
+7. You can use CSS __@keyframes__ to change the color of a button in its _hover_ state. Here's an example of it:
 
 ```html
 <style>
-  img:hover {
-    animation-name: width;
+  button {
+    border-radius: 5px;
+    color: white;
+    background-color: #0F5897;
+    padding: 5px 10px 8px 10px;
+  }
+
+  button:hover {
+    animation-name: background-color;
     animation-duration: 500ms;
   }
 
-  @keyframes width {
+  @keyframes background-color {
     100% {
-      width: 40px;
+      background-color: #4791d0;
     }
   }
+
 </style>
 
-<img src="https://bit.ly/smallgooglelogo" alt="Google's Logo" />
+<button>Register</button>
 ```
 
 That's great, but right now the animation resets after 500ms has passed, causing the button to revert back to the original color. You want the button to stay highlighted. This can be done by setting the __animation-fill-mode__ property to forwards. The __animation-fill-mode__ specifies the style applied to an element when the animation has finished. You can set it like so:

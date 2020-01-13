@@ -257,4 +257,4 @@ CSS Variables can simplify the way you use media queries. For instance, when you
 
 Media query on             |  Media query off
 :-------------------------:|:-------------------------:
-<img src="../pics/4_small.png" alt="alt text" width="300">  |  <img src="../pics/4_small.png" alt="alt text" width="300"> 
+<img src="../pics/4_small.png" alt="alt text" width="300">  |  <img src="../pics/4_big.png" alt="alt text" width="300"> 
