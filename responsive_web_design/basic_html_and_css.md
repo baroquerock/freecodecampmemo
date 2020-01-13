@@ -178,7 +178,14 @@ improve accessibility and is displayed if the image fails to load. If the image 
 
 ## Result
 
-<img src="1_without_css.png" alt="alt text" width="100"> 
 
-![](1_with_css.png | width=100)
+<div class="row">
+  <div class="column">
+    <img src="1_without_css.png" alt="alt text" width="350"> 
+  </div>
+  <div class="column">
+    <img src="1_with_css.png" alt="alt text" width="350"> 
+  </div>
+</div>
+
 
