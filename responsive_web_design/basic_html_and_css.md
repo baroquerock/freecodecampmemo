@@ -178,6 +178,6 @@ improve accessibility and is displayed if the image fails to load. If the image 
 
 ## Result
 
-![](1_without_css.png){width=50%}
-![](1_with_css.png){width=50%}
+![](1_without_css.png | width=100)
+![](1_with_css.png | width=100)
 
