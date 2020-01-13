@@ -12,13 +12,11 @@ The text and examples __are not__ written by me (mostly) and were taken from the
 4. [Variables in CSS](responsive_web_design/variables.md)
 5. [Elements of visual design](responsive_web_design/visual_design.md) (text)
 6. [Elements of visual design](responsive_web_design/visual_design_2.md) (positioning, pseudo-classes and animation)
-
-
-
 7. [Accessibility](responsive_web_design/accessibility.md)
-8. [CSS flexbox](responsive_web_design/css_flexbox.md)
-9. [CSS grid](responsive_web_design/css_grid.md)
-10. [Responsive web design principles](responsive_web_design/responsive_web_design.md)
+8. [Responsive web design principles](responsive_web_design/responsive_web_design.md)
+9. [CSS flexbox](responsive_web_design/css_flexbox.md)
+10. [CSS grid](responsive_web_design/css_grid.md)
+
 
 
 
