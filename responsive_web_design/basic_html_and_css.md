@@ -180,7 +180,7 @@ improve accessibility and is displayed if the image fails to load. If the image 
 
 Without CSS             |  With CSS
 :-------------------------:|:-------------------------:
-<img src="1_without_css.png" alt="alt text" width="250">  |  <img src="1_with_css.png" alt="alt text" width="250"> 
+<img src="1_without_css.png" alt="alt text" width="300">  |  <img src="1_with_css.png" alt="alt text" width="300"> 
 
 
 
