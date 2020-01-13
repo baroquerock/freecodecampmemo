@@ -179,7 +179,7 @@ improve accessibility and is displayed if the image fails to load. If the image 
 ## Result
 
 <img src="1_without_css.png"
-    title="Result without CSS" height="60%" />
+    title="Result without CSS" height="30%" />
 
 <img src="1_with_css.png"
-    title="Result with CSS" height="60%" />
+    title="Result with CSS" height="30%" />
