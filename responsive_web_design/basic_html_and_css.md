@@ -95,112 +95,89 @@ improve accessibility and is displayed if the image fails to load. If the image 
 
 8. Here, you have two radio inputs. When the user submits the form with the indoor option selected, the form data will include the line: indoor-outdoor=indoor. This is from the __name__ and __value__ attributes of the "indoor" input. If you omit the __value__ attribute, the submitted form data uses the default value, which is on. In this scenario, if the user clicked the "indoor" option and submitted the form, the resulting form data would be indoor-outdoor=on, which is not useful. So the value attribute needs to be set to something to identify the option.
 
+9. You can set a checkbox or radio button to be checked by default using the checked attribute.
+
+```html
+<input type="radio" name="test-name" checked>
+```
+
 
 ## Sample code
 
 ```html
 
-<!DOCTYPE html>
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<style>
+  .red-text {
+    color: red;
+  }
 
-<html>
+  h2 {
+    font-family: Lobster, monospace;
+  }
 
-<head>
+  p {
+    font-size: 16px;
+    font-family: monospace;
+  }
 
-    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+  .thick-green-border {
+    border-color: green;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 50%;
+  }
 
-    <style>
-        .red-text {
-            color: red;
-        }
-        
-        h2 {
-            font-family: Lobster, monospace;
-        }
-        
-        p {
-            font-size: 16px;
-            font-family: monospace;
-        }
-        
-        .thick-green-border {
-            border-color: green;
-            border-width: 10px;
-            border-style: solid;
-            border-radius: 50%;
-        }
-        
-        .smaller-image {
-            width: 100px;
-        }
-        
-        .silver-background {
-            background-color: silver;
-        }
-        
-        #cat-photo-form {
-            background-color: green;
-        }
-        
-        [type='checkbox'] {
-            margin: 10px 0px 15px 0px;
-        }
-    </style>
+  .smaller-image {
+    width: 100px;
+  }
 
-</head>
+  .silver-background {
+    background-color: silver;
+  }
 
-<body>
+  #cat-photo-form {
+    background-color: green;
+  }
+</style>
 
-    <h2 class="red-text">CatPhotoApp</h2>
+<h2 class="red-text">CatPhotoApp</h2>
+<main>
+  <p class="red-text">Click here to view more <a href="#">cat photos</a>.</p>
 
-    <main>
+  <a href="#"><img class="smaller-image thick-green-border" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
 
-        <p class="red-text">Click here to view more <a href="#">cat photos</a>.</p>
+  <div class="silver-background">
+    <p>Things cats love:</p>
+    <ul>
+      <li>cat nip</li>
+      <li>laser pointers</li>
+      <li>lasagna</li>
+    </ul>
+    <p>Top 3 things cats hate:</p>
+    <ol>
+      <li>flea treatment</li>
+      <li>thunder</li>
+      <li>other cats</li>
+    </ol>
+  </div>
 
-        <p>
-            View more <a href="http://freecatphotoapp.com" target="_blank">cat photos</a>
-        </p>
+  <form action="/submit-cat-photo" id="cat-photo-form">
+    <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
+    <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
+    <label><input type="checkbox" name="personality" checked> Loving</label>
+    <label><input type="checkbox" name="personality"> Lazy</label>
+    <label><input type="checkbox" name="personality"> Energetic</label><br>
+    <input type="text" placeholder="cat photo URL" required>
+    <button type="submit">Submit</button>
+  </form>
+</main>
 
-        <a href="#"><img class="smaller-image thick-green-border" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
-
-        <div class="silver-background">
-
-            <p>Things cats love:</p>
-            <ul>
-                <li>cat nip</li>
-                <li>laser pointers</li>
-                <li>lasagna</li>
-            </ul>
-            <p>Top 3 things cats hate:</p>
-            <ol>
-                <li>flea treatment</li>
-                <li>thunder</li>
-                <li>other cats</li>
-            </ol>
-
-        </div>
-
-        <form action="/submit-cat-photo" id="cat-photo-form">
-
-            <label for="indoor">
-                <input id="indoor" type="radio" name="indoor-outdoor" checked> Indoor</label>
-            <label for="outdoor">
-                <input id="outdoor" type="radio" name="indoor-outdoor"> Outdoor</label>
-            <br>
-            <label for="loving">
-                <input id="loving" type="checkbox" name="personality" checked> Loving</label>
-            <label for="lazy">
-                <input id="lazy" type="checkbox" name="personality"> Lazy</label>
-            <label for="energetic">
-                <input id="energetic" type="checkbox" name="personality"> Energetic</label>
-            <br>
-            <input type="text" placeholder="cat photo URL" required>
-            <button type="submit">Submit</button>
-
-        </form>
-
-    </main>
-
-</body>
-
-</html>
 ```
+
+
+## Result
+
+![Result without CSS](1_without_css.png)
+
+![Result with CSS](1_with_css.png)
