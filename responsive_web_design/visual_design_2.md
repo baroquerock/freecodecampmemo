@@ -53,7 +53,7 @@ Changing an element's position to relative does not remove it from the normal fl
 </body>
 ```
 
-<img src="../pics/6_relative.png" alt="alt text" width="150">
+<img src="../pics/6_relative.png" alt="alt text" width="250">
 
 3. Positioning gives you a lot of flexibility and power over the visual layout of a page. It's good to remember that no matter the position of elements, the underlying HTML markup should be organized and make sense when read from top to bottom. This is how users with visual impairments (who rely on assistive devices like screen readers) access your content.
 
@@ -87,7 +87,7 @@ One nuance with absolute positioning is that it will be locked relative to its c
 </body>
 ```
 
-<img src="../pics/6_absolute.png" alt="alt text" width="150">
+<img src="../pics/6_absolute.png" alt="alt text" width="250">
 
 5. The next layout scheme that CSS offers is the fixed position, which is a type of absolute positioning that locks an element relative to the browser window. Similar to absolute positioning, it's used with the CSS offset properties and also removes the element from the normal flow of the document. Other items no longer "realize" where it is positioned, which may require some layout adjustments elsewhere.
 
@@ -129,7 +129,7 @@ One key difference between the fixed and absolute positions is that an element w
 </body>
 ```
 
-<img src="../pics/6_fixed.png" alt="alt text" width="150">
+<img src="../pics/6_fixed.png" alt="alt text" width="250">
 
 
 6. The next positioning tool does not actually use position, but sets the __float__ property of an element. Floating elements are removed from the normal flow of a document and pushed to either the left or right of their containing parent element. It's commonly used with the __width__ property to specify how much horizontal space the floated element requires.
@@ -166,7 +166,7 @@ One key difference between the fixed and absolute positions is that an element w
 </body>
 ```
 
-<img src="../pics/6_float.png" alt="alt text" width="150">
+<img src="../pics/6_float.png" alt="alt text" width="250">
 
 
 7. When elements are positioned to overlap, the element coming later in the HTML markup will, by default, appear on the top of the other elements. However, the __z-index__ property can specify the order of how elements are stacked on top of one another. It must be an integer (i.e. a whole number and not a decimal), and higher values for the __z-index__ property of an element move it higher in the stack than those with lower values.
@@ -214,7 +214,7 @@ One key difference between the fixed and absolute positions is that an element w
 <div></div>
 ```
 
-<img src="../pics/6_z_margin.png" alt="alt text" width="150">
+<img src="../pics/6_margin.png" alt="alt text" width="250">
 
 
 ## Color
