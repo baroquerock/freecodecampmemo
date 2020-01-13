@@ -140,8 +140,11 @@ _Note_: if your container can't fit all your items on one row, it will move them
 
 21. Turning an element into a grid only affects the behavior of its direct descendants. So by turning a direct descendant into a grid, you have a grid within a grid. For example, by setting the __display__ and __grid-template-columns__ properties of the element with the item3 class, you create a grid within your grid.
 
+22. CSS Grid can be an easy way to make your site more responsive by using media queries to rearrange grid areas, change dimensions of a grid, and rearrange the placement of items.
 
-## Sample code
+
+
+## Sample code (general example)
 
 ```html
 <style>
@@ -189,3 +192,143 @@ _Note_: if your container can't fit all your items on one row, it will move them
   <div class="item5">5</div>
 </div>
 ```
+
+<img src="../pics/10_example.png" alt="alt text" width="300"> 
+
+## Sample code (media queries)
+
+```html
+<style>
+  .item1 {
+    background: LightSkyBlue;
+    grid-area: header;
+  }
+
+  .item2 {
+    background: LightSalmon;
+    grid-area: advert;
+  }
+
+  .item3 {
+    background: PaleTurquoise;
+    grid-area: content;
+  }
+
+  .item4 {
+    background: lightpink;
+    grid-area: footer;
+  }
+
+  .container {
+    font-size: 1.5em;
+    min-height: 300px;
+    width: 100%;
+    background: LightGray;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto 1fr auto;
+    grid-gap: 10px;
+    grid-template-areas:
+      "header"
+      "advert"
+      "content"
+      "footer";
+  }
+
+  @media (min-width: 300px){
+    .container{
+      grid-template-columns: auto 1fr;
+      grid-template-rows: auto 1fr auto;
+      grid-template-areas:
+        "advert header"
+        "advert content"
+        "advert footer";
+    }
+  }
+
+  @media (min-width: 400px){
+    .container{
+      grid-template-areas:
+        "header header"
+        "advert content"
+        "footer footer";
+    }
+  }
+</style>
+
+<div class="container">
+  <div class="item1">header</div>
+  <div class="item2">advert</div>
+  <div class="item3">content</div>
+  <div class="item4">footer</div>
+</div>
+```
+
+ Media query off   | Media query 300px | Media query 400px
+:-----------------:|:-----------------:|:-----------------: 
+<img src="../pics/10_media.png" alt="alt text" width="300">  |  <img src="../pics/10_media_300.png" alt="alt text" width="300"> | <img src="../pics/10_media_400.png" alt="alt text" width="300">
+
+
+## Sample code (nested grid)
+
+
+```html
+<style>
+  .container {
+    font-size: 1.5em;
+    min-height: 300px;
+    width: 100%;
+    background: LightGray;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-gap: 10px;
+    grid-template-areas:
+      "advert header"
+      "advert content"
+      "advert footer";
+  }
+  .item1 {
+    background: LightSkyBlue;
+    grid-area: header;
+  }
+
+  .item2 {
+    background: LightSalmon;
+    grid-area: advert;
+  }
+
+  .item3 {
+    background: PaleTurquoise;
+    grid-area: content;
+    display: grid;
+    grid-template-columns: auto 1fr;
+  }
+
+  .item4 {
+    background: lightpink;
+    grid-area: footer;
+  }
+
+  .itemOne {
+    background: PaleGreen;
+  }
+
+  .itemTwo {
+    background: BlanchedAlmond;
+  }
+
+</style>
+
+<div class="container">
+  <div class="item1">header</div>
+  <div class="item2">advert</div>
+  <div class="item3">
+    <div class="itemOne">paragraph1</div>
+    <div class="itemTwo">paragraph2</div>
+  </div>
+  <div class="item4">footer</div>
+</div>
+```
+
+<img src="../pics/10_gridingrid.png" alt="alt text" width="300"> 
